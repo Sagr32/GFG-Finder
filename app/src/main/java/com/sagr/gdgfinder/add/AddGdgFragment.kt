@@ -19,8 +19,10 @@ class AddGdgFragment : Fragment() {
         ViewModelProvider(this)[AddGdgViewModel::class.java]
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         val binding = AddGdgFragmentBinding.inflate(inflater)
 
         // Allows Data Binding to Observe LiveData with the lifecycle of this Fragment
@@ -36,6 +38,8 @@ class AddGdgFragment : Fragment() {
                     Snackbar.LENGTH_SHORT // How long to display the message.
                 ).show()
                 viewModel.doneShowingSnackbar()
+                binding.button.contentDescription = getString(R.string.submitted)
+                binding.button.text = getString(R.string.done)
             }
         })
 

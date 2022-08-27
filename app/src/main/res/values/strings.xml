@@ -40,4 +40,5 @@
     <string name="submit">Submit</string>
     <string name="navigate_to_search">Navigate To Search</string>
     <string name="background_image">Background Image</string>
+    <string name="ok">Ok</string>
 </resources>

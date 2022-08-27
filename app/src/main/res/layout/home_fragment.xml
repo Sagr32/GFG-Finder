@@ -19,10 +19,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/spacing_normal"
             android:contentDescription="@string/navigate_to_search"
             android:onClick="@{()->viewModel.onFabClicked()}"
-            android:src="@drawable/ic_gdg" />
+            android:src="@drawable/ic_gdg"
+            app:backgroundTint="@color/primaryColor" />
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -32,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clipToPadding="true"
-                android:paddingBottom="16dp"
+                android:paddingBottom="@dimen/spacing_normal"
                 tools:context=".home.HomeFragment">
 
                 <ImageView
@@ -49,11 +50,11 @@
 
                 <TextView
                     android:id="@+id/title"
-                    style="@style/TextAppearance.Title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/spacing_normal"
                     android:text="@string/about_google_developer_groups"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
                     app:layout_constraintEnd_toStartOf="@+id/end_grid"
                     app:layout_constraintStart_toStartOf="@+id/start_grid"
                     app:layout_constraintTop_toBottomOf="@id/image" />
@@ -70,11 +71,11 @@
 
                 <TextView
                     android:id="@+id/subtitle"
-                    style="@style/TextAppearance.Subtitle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="13dp"
                     android:text="@string/gdgs_are"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
                     app:layout_constraintEnd_toStartOf="@id/end_grid"
                     app:layout_constraintStart_toEndOf="@id/start_grid"
                     app:layout_constraintTop_toBottomOf="@+id/intro_text" />
@@ -93,7 +94,7 @@
                     android:id="@+id/end_image"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/spacing_normal"
                     android:scaleType="centerCrop"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintDimensionRatio="3:1.5"
@@ -107,14 +108,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    app:layout_constraintGuide_begin="16dp" />
+                    app:layout_constraintGuide_begin="@dimen/spacing_normal" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/end_grid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    app:layout_constraintGuide_end="16dp" />
+                    app:layout_constraintGuide_end="@dimen/spacing_normal" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
